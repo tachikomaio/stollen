@@ -1,5 +1,12 @@
 language: node_js
 node_js:
-  - "0.10"
+- '0.10'
 script:
-  - npm run lint
+- npm run lint
+deploy:
+  provider: heroku
+  api_key:
+    secure: ElTy0BYyr+CNnTJuXCT3JmsU7e9JZxhvO/ifo4kWXDcQdeQIEa1nCliva+WT//L6U+gm5dmbWL6MeBRpib0/B8bECN+JekVf9fG68zYxoCB52kjrPspCyBayLdYeLUOuw6bqzhP4IIFtRZ47EJTFxwKVyQuW/MRNJRV7wW34j8E=
+  app: tachikomaio-stollen
+  on:
+    repo: tachikomaio/stollen
