@@ -6,6 +6,7 @@
   "dependencies": {
     "cron": "^1.0.5",
     "hubot": "^2.10.0",
+    "hubot-cron": "^0.2.7",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.2",
     "hubot-google-translate": "^0.1.0",
