@@ -8,6 +8,7 @@ retriever = LogentriesRetrievingLog({
   logAddr: logAddr
 })
 room = process.env.HUBOT_LOGENTRIES_STOLLEN_ROOM
+# logentries delays 10-30sec, so get from 2minutes ago to 1minute ago
 params = {start: - 2 * 60 * 1000, end: - 1 * 60 * 1000}
 
 module.exports = (robot) ->
