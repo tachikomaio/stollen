@@ -10,6 +10,7 @@ retriever = new LogentriesRetrievingLog({
 room = process.env.HUBOT_LOGENTRIES_STOLLEN_ROOM
 # logentries delays 10-30sec, so get from 2minutes ago to 1minute ago
 params = {start: - 2 * 60 * 1000, end: - 1 * 60 * 1000}
+noLogs = '...No logs.'
 
 module.exports = (robot) ->
   new cron '10 * * * * *', () ->
@@ -22,6 +23,9 @@ module.exports = (robot) ->
     retriever.getLogs params, (err, _, body) ->
       if (err)
         robot.logger.error "logentries error: #{err}, body: #{body}"
+        return
+      if (!body)
+        robot send {room: room}, noLogs
         return
       robot.send {room: room}, body
   , null, true, "Asia/Tokyo"
