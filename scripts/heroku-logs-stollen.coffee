@@ -22,4 +22,5 @@ module.exports = (robot) ->
       if (err)
         robot.logger.error "logentries error: #{err}, body: #{body}"
         return
-      robot.send {room: room}, body, null, true, "Asia/Tokyo"
+      robot.send {room: room}, body
+  , null, true, "Asia/Tokyo"
