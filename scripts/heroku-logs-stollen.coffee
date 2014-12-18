@@ -13,7 +13,7 @@ params = {start: - 2 * 60 * 1000, end: - 1 * 60 * 1000}
 noLogs = '...No logs.'
 
 module.exports = (robot) ->
-  new cron '10 * * * * *', () ->
+  retrieveLogs = ->
     if !accountKey || !logAddr || !room
       robot.logger.error "env missing " + \
         "HUBOT_LOGENTRIES_STOLLEN_KEY: #{process.env.HUBOT_LOGENTRIES_STOLLEN_KEY} " + \
@@ -28,4 +28,7 @@ module.exports = (robot) ->
         robot.send {room: room}, noLogs
         return
       robot.send {room: room}, body
+
+  new cron '10 * * * * *', () ->
+    retrieveLogs()
   , null, true, "Asia/Tokyo"
