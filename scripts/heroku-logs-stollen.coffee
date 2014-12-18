@@ -3,7 +3,7 @@ LogentriesRetrievingLog = require('logentries-retrieving-log')
 accountKey = process.env.HUBOT_LOGENTRIES_STOLLEN_KEY
 logAddr = process.env.HUBOT_LOGENTRIES_STOLLEN_ADDR
 
-retriever = LogentriesRetrievingLog({
+retriever = new LogentriesRetrievingLog({
   accountKey: accountKey,
   logAddr: logAddr
 })
