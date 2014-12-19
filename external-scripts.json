@@ -11,5 +11,6 @@
   "hubot-shipit",
   "hubot-youtube",
   "hubot-tantanmen",
-  "hubot-cron"
+  "hubot-cron",
+  "hubot-github-repo-event-notifier"
 ]
