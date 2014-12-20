@@ -29,6 +29,6 @@ module.exports = (robot) ->
         return
       robot.send {room: room}, body
 
-  new cron '10 * * * * *', () ->
+  new cron '15 * * * * *', () ->
     retrieveLogs()
   , null, true, "Asia/Tokyo"
