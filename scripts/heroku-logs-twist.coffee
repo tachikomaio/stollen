@@ -16,9 +16,9 @@ module.exports = (robot) ->
   retrieveLogs = ->
     if !accountKey || !logAddr || !room
       robot.logger.error "env missing " + \
-        "HUBOT_LOGENTRIES_STOLLEN_KEY: #{process.env.HUBOT_LOGENTRIES_STOLLEN_KEY} " + \
-        "HUBOT_LOGENTRIES_STOLLEN_ADDR: #{process.env.HUBOT_LOGENTRIES_STOLLEN_ADDR} " + \
-        "HUBOT_LOGENTRIES_STOLLEN_ROOM: #{process.env.HUBOT_LOGENTRIES_STOLLEN_ROOM}"
+        "HUBOT_LOGENTRIES_TWIST_KEY: #{process.env.HUBOT_LOGENTRIES_TWIST_KEY} " + \
+        "HUBOT_LOGENTRIES_TWIST_ADDR: #{process.env.HUBOT_LOGENTRIES_TWIST_ADDR} " + \
+        "HUBOT_LOGENTRIES_TWIST_ROOM: #{process.env.HUBOT_LOGENTRIES_TWIST_ROOM}"
       return
     retriever.getLogs params, (err, _, body) ->
       if (err)
