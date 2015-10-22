@@ -9,6 +9,7 @@ script:
 addons:
   apt:
     packages:
+    - gcc-4.9
     - g++-4.9
 deploy:
   provider: heroku
