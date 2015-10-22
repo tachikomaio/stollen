@@ -9,7 +9,7 @@ script:
 addons:
   apt:
     packages:
-    - g++-5
+    - g++-4.9
 deploy:
   provider: heroku
   api_key:
