@@ -29,7 +29,7 @@
     "coffeelint": "^1.7.1"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "4.x"
   },
   "private": true,
   "scripts": {
