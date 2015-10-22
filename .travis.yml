@@ -6,6 +6,10 @@ before_install:
 - "npm install npm@2.14.7 -g"
 script:
 - npm run lint
+addons:
+  apt:
+    packages:
+    - g++-5
 deploy:
   provider: heroku
   api_key:
