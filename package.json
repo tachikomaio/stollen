@@ -34,6 +34,6 @@
   },
   "private": true,
   "scripts": {
-    "lint": "coffeelint -f coffeelint.json *.json scripts/*.coffee"
+    "lint": "coffeelint -f coffeelint.json scripts/*.coffee"
   }
 }
